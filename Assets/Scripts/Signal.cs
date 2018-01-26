@@ -52,37 +52,3 @@ public class Signal : MonoBehaviour {
         line.SetPosition(i, lastPosition + direction * 100);
     }
 }
-
-//lastPosition = transform.position;
-
-//// Direction of movement
-//velocity = transform.forward;
-
-//line.positionCount = 1;
-//line.SetPosition(0, lastPosition);
-
-//RaycastHit hit = new RaycastHit();
-//int i = 1;
-//while (true) { 
-
-
-//    // If there's something in our way, bounce (add new vertex)
-//    if(Physics.Raycast(lastPosition, lastPosition + velocity, out hit)){
-//        // Reflect velocity
-//        velocity = Vector3.Reflect(velocity, hit.normal);
-
-//        // Set lastPosition to where we hit
-//        lastPosition = hit.point;
-
-//        print(lastPosition);
-//        Debug.DrawLine(lastPosition, lastPosition + velocity, Color.red);
-
-//        line.positionCount += 1;
-//        line.SetPosition(i, lastPosition);
-//        lastPosition += velocity;
-//        i++;
-//    }
-//    else {
-//        break;
-//    }
-//}

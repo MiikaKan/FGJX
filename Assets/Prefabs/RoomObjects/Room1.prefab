@@ -21,6 +21,9 @@ GameObject:
   - component: {fileID: 4676883512944224}
   - component: {fileID: 33158298705126194}
   - component: {fileID: 23320037870888696}
+  - component: {fileID: 114780405354696222}
+  - component: {fileID: 64444815504963686}
+  - component: {fileID: 114319344804626352}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Untagged
@@ -35,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1682617909997336}
   m_LocalRotation: {x: 0.00027889668, y: -0.00020338607, z: -0.000009586385, w: 0.99999994}
-  m_LocalPosition: {x: -0.000012099743, y: 0.00001835823, z: -0.00074223056}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: -0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,4 +89,42 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1682617909997336}
-  m_Mesh: {fileID: 4300042, guid: 7b7dfedc483ae9042a1d4b2655d2fe66, type: 3}
+  m_Mesh: {fileID: 4300042, guid: d8f7e6b4394e8874b8c0da0330fa2c7e, type: 3}
+--- !u!64 &64444815504963686
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682617909997336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300042, guid: d8f7e6b4394e8874b8c0da0330fa2c7e, type: 3}
+--- !u!114 &114319344804626352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682617909997336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceAmount: 0.6
+--- !u!114 &114780405354696222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682617909997336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf632ea4060cef448f9e80a0a6feefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: 3

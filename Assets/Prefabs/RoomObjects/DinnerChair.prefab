@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23674319202523546}
   - component: {fileID: 114537771496179490}
   - component: {fileID: 114891717007043248}
+  - component: {fileID: 65170585040957436}
+  - component: {fileID: 65220542866610790}
   m_Layer: 0
   m_Name: DinnerChair
   m_TagString: Untagged
@@ -36,9 +38,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436364476724046}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3478007, y: 0, z: 1.2222509}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.12, y: 0.000000053426284, z: 0.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,7 +87,31 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436364476724046}
-  m_Mesh: {fileID: 4300024, guid: 7b7dfedc483ae9042a1d4b2655d2fe66, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d8f7e6b4394e8874b8c0da0330fa2c7e, type: 3}
+--- !u!65 &65170585040957436
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436364476724046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.79, y: 0.7, z: 0.705325}
+  m_Center: {x: 0.03, y: 0.36, z: 0.0000005066395}
+--- !u!65 &65220542866610790
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436364476724046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 1.625431, z: 0.705325}
+  m_Center: {x: -0.36, y: 0.8127155, z: 0.0000005066395}
 --- !u!114 &114537771496179490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceAmount: 1
+  bounceAmount: 0.9
 --- !u!114 &114891717007043248
 MonoBehaviour:
   m_ObjectHideFlags: 1

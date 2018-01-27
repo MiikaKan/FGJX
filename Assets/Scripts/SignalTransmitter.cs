@@ -25,7 +25,7 @@ public class SignalTransmitter : MonoBehaviour {
     private void Update()
     {
         _lastPosition = transform.position;
-        _direction = transform.forward;
+        _direction = -transform.right;
         _signalStrength = _startingSignalStrength;
 
         // Set line's first vertex to starting position

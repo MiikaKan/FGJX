@@ -15,4 +15,9 @@ public class SignalBouncer : MonoBehaviour {
             return bounceAmount;
         }
     }
+
+    //private void OnParticleCollision(GameObject other)
+    //{
+    //    other.GetComponent<Renderer>().material.color = Color.red;
+    //}
 }

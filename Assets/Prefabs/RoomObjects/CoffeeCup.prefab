@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114071673709040590}
   - component: {fileID: 114891816739019092}
   - component: {fileID: 65120738808020810}
+  - component: {fileID: 114906973578282950}
   m_Layer: 0
   m_Name: CoffeeCup
   m_TagString: Untagged
@@ -123,3 +124,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAmount: 3
+--- !u!114 &114906973578282950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240635308181712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []

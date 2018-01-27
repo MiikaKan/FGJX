@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33359756664154954}
   - component: {fileID: 23061496512451544}
   - component: {fileID: 114133642068303640}
-  - component: {fileID: 114756030672113774}
   - component: {fileID: 65639248785989720}
   m_Layer: 0
   m_Name: Mirror
@@ -112,15 +111,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceAmount: 1
---- !u!114 &114756030672113774
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1489497953272110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf632ea4060cef448f9e80a0a6feefe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationAmount: 3

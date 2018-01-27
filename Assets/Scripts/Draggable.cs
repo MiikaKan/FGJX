@@ -1,13 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cakeslice;
 
+[RequireComponent(typeof(Outline))]
 public class Draggable : MonoBehaviour {
 
     private Vector3 screenPoint;
     private Vector3 offset;
     [SerializeField]
     private int rotationAmount = 3;
+
+    private Outline _outline;
+
+    private void Start()
+    {
+        _outline = GetComponent<Outline>();
+        _outline.enabled = false;
+    }
+
+    private void OnMouseEnter()
+    {
+        _outline.enabled = true;
+    }
+
+    private void OnMouseExit()
+    {
+        _outline.enabled = false;
+    }
 
     private void OnMouseDown()
     {

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114125389046774942}
   - component: {fileID: 114734943035387874}
   - component: {fileID: 65108080191017246}
+  - component: {fileID: 114367523592345544}
   m_Layer: 0
   m_Name: SofaChair
   m_TagString: Untagged
@@ -112,6 +113,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceAmount: 1
+--- !u!114 &114367523592345544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405470610369426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114734943035387874
 MonoBehaviour:
   m_ObjectHideFlags: 1

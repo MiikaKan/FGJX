@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114173529758676178}
   - component: {fileID: 114828352546823534}
   - component: {fileID: 65940808037223512}
+  - component: {fileID: 114684194690055954}
   m_Layer: 0
   m_Name: Fridge
   m_TagString: Untagged
@@ -112,6 +113,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceAmount: 1
+--- !u!114 &114684194690055954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1713138939834732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114828352546823534
 MonoBehaviour:
   m_ObjectHideFlags: 1

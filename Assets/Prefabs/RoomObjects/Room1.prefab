@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4676883512944224}
   - component: {fileID: 33158298705126194}
   - component: {fileID: 23320037870888696}
-  - component: {fileID: 114780405354696222}
   - component: {fileID: 64444815504963686}
   - component: {fileID: 114319344804626352}
   m_Layer: 0
@@ -116,15 +115,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceAmount: 0.6
---- !u!114 &114780405354696222
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1682617909997336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf632ea4060cef448f9e80a0a6feefe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationAmount: 3

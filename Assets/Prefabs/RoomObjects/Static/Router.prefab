@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingSignalStrength: 100
-  _maxBounces: 100
+  _maxBounces: 30
   _scoreDisplay: {fileID: 0}
 --- !u!120 &120053740152849802
 LineRenderer:
@@ -127,7 +127,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: bd074b45683a885498951fbbe6bbbf46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

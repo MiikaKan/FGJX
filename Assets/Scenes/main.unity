@@ -572,6 +572,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1619824532574510, guid: 2da50cd29bd44fa469ea0d157e06f70d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114211017524750504, guid: 2da50cd29bd44fa469ea0d157e06f70d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2da50cd29bd44fa469ea0d157e06f70d, type: 2}
@@ -1642,6 +1646,7 @@ RectTransform:
   m_Children:
   - {fileID: 277009250}
   - {fileID: 277411751}
+  - {fileID: 789273653}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1831,6 +1836,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1400057815407388, guid: 3b07e4c14d41c244a8c720646e598b3e, type: 2}
+      propertyPath: m_Name
+      value: ConnectPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 114476524249779646, guid: 3b07e4c14d41c244a8c720646e598b3e,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -1840,6 +1849,10 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400057815407388, guid: 3b07e4c14d41c244a8c720646e598b3e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b07e4c14d41c244a8c720646e598b3e, type: 2}

@@ -5,31 +5,25 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class HighlightButton : MonoBehaviour, IPointerEnterHandler, IDeselectHandler
+public class MenuButtonHighlight : MonoBehaviour, IPointerEnterHandler, IDeselectHandler
 {
 
     public TextMeshProUGUI buttonText;
     [SerializeField]
-    private Color textColor;
-
-    private void Start()
-    {
-        if (!EventSystem.current.alreadySelecting)
-            EventSystem.current.SetSelectedGameObject(this.gameObject);
-            buttonText.color = Color.white;
-    }
+    private Color[] textColors;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!EventSystem.current.alreadySelecting)
-            print("ye");
+        {
             EventSystem.current.SetSelectedGameObject(this.gameObject);
-            buttonText.color = Color.white;
+            buttonText.color = textColors[1];
+        }
     }
 
     public void OnDeselect(BaseEventData eventData)
     {
         this.GetComponent<Selectable>().OnPointerExit(null);
-        buttonText.color = textColor;
+        buttonText.color = textColors[0];
     }
 }

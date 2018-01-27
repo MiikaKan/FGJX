@@ -248,7 +248,7 @@ Animator:
   m_GameObject: {fileID: 1281803886290780}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b155e92104d442f41acef69821cd1097, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8e7a83d9953194d46b09f8384854a8d1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -268,7 +268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 114151642172580684}
-  textColor: {r: 0.15294118, g: 0.11372549, b: 0.08627451, a: 1}
+  textColors:
+  - {r: 0.15294118, g: 0.11372549, b: 0.08627451, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114055535982987692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -696,7 +698,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 114759759120654620}
-  textColor: {r: 0.15294118, g: 0.11372549, b: 0.08627451, a: 1}
+  textColors:
+  - {r: 0.15294118, g: 0.11372549, b: 0.08627451, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114870253042702922
 MonoBehaviour:
   m_ObjectHideFlags: 1

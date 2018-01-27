@@ -29,11 +29,20 @@ public class ScoreDisplay : MonoBehaviour {
 
         set
         {
-            if(_score != value)
+            if (_score != value)
             {
                 _score = value;
                 SetScoreText(_score);
-                SetScoreColor(_signalColors[0], _signalColors[3], _score);
+                if(_score < 1)
+                {
+                    _color = _signalColors[0];
+                    SetScoreColor(_color);
+                }
+                else
+                {
+                    _color = Color.Lerp(_signalColors[1], _signalColors[2], 0.01f * _score);
+                    SetScoreColor(_color);
+                }
             }
         }
     }
@@ -73,9 +82,8 @@ public class ScoreDisplay : MonoBehaviour {
         _bouncesText.text = value.ToString();
     }
 
-    private void SetScoreColor(Color color1, Color color2, float score)
+    private void SetScoreColor(Color color)
     {
-        Color color = Color.Lerp(color1, color2, 0.01f*score);
         _signalStrengthText.color = color;
         _wifiImage.color = color;
     }

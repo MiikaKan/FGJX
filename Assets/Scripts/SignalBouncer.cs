@@ -5,7 +5,6 @@ using UnityEngine;
 public class SignalBouncer : MonoBehaviour {
 
     [SerializeField]
-    [Range(0f, 1f)]
     private float bounceAmount = 1f;
 
     public float BounceAmount

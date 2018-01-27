@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 33842003195842100}
   - component: {fileID: 23467533802940598}
   - component: {fileID: 65310422061532398}
+  - component: {fileID: 114174612588027820}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -164,3 +165,15 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114174612588027820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1961497637958842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceAmount: 1.2

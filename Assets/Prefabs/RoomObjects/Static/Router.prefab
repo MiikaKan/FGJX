@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startingSignalStrength: 100
   _maxBounces: 100
+  _scoreDisplay: {fileID: 0}
 --- !u!120 &120053740152849802
 LineRenderer:
   m_ObjectHideFlags: 1

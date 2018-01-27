@@ -483,6 +483,26 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114860441233825478, guid: 2da50cd29bd44fa469ea0d157e06f70d,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114860441233825478, guid: 2da50cd29bd44fa469ea0d157e06f70d,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114713892752674214, guid: 2da50cd29bd44fa469ea0d157e06f70d,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114713892752674214, guid: 2da50cd29bd44fa469ea0d157e06f70d,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2da50cd29bd44fa469ea0d157e06f70d, type: 2}
   m_IsPrefabParent: 0
@@ -631,7 +651,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -654,7 +674,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 631846084}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.93, y: 16.8, z: 0}
+  m_LocalPosition: {x: -3.93, y: 12.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1018,6 +1038,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 19
       objectReference: {fileID: 0}
+    - target: {fileID: 114968698601667946, guid: 8c62416d367b6fc4c852e71c8b5d670c,
+        type: 2}
+      propertyPath: _scoreDisplay
+      value: 
+      objectReference: {fileID: 1217632027}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c62416d367b6fc4c852e71c8b5d670c, type: 2}
   m_IsPrefabParent: 0

@@ -12,6 +12,8 @@ public class SignalTransmitter : MonoBehaviour {
     private float _startingSignalStrength = 100f;
     [SerializeField]
     private int _maxBounces = 100;
+    [SerializeField]
+    private ScoreDisplay _scoreDisplay;
 
     private float _signalStrength;
 
@@ -45,6 +47,7 @@ public class SignalTransmitter : MonoBehaviour {
                     receiver.Receive(_signalStrength);
                     _lineRenderer.positionCount++;
                     _lineRenderer.SetPosition(i, hit.point);
+                    _scoreDisplay.Bounces = i - 1;
                     return;
                 }
 
@@ -55,7 +58,7 @@ public class SignalTransmitter : MonoBehaviour {
                     _signalStrength *= bouncer.BounceAmount;
 
                     // If signal strength is below 0, stop bouncing
-                    if (_signalStrength <= 0f)
+                    if (_signalStrength <= 0.05f)
                     {
                         return;
                     }
@@ -85,6 +88,8 @@ public class SignalTransmitter : MonoBehaviour {
         // Set last line to be long (to appear to go on forever
         _lineRenderer.positionCount++;
         _lineRenderer.SetPosition(i, _lastPosition + _direction * 100);
+
+        _scoreDisplay.Bounces = i - 1;
 
         Debug.DrawRay(_lastPosition, Vector3.up, Color.yellow);
     }

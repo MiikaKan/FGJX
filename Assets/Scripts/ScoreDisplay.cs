@@ -10,8 +10,16 @@ public class ScoreDisplay : MonoBehaviour {
     private TextMeshProUGUI _scoreText;
     [SerializeField]
     private TextMeshProUGUI _bouncesText;
+    [SerializeField]
+    private TextMeshProUGUI _signalStrengthText;
+    [SerializeField]
+    private Image _wifiImage;
+    [SerializeField]
+    private Color[] _signalColors; 
 
     private float _score;
+    private Color _color = Color.white;
+
     public float Score
     {
         get
@@ -25,6 +33,7 @@ public class ScoreDisplay : MonoBehaviour {
             {
                 _score = value;
                 SetScoreText(_score);
+                SetScoreColor(_signalColors[0], _signalColors[3], _score);
             }
         }
     }
@@ -50,7 +59,7 @@ public class ScoreDisplay : MonoBehaviour {
 
     private void Start()
     {
-        Score = 100;
+        Score = 60;
         Bounces = 0;
     }
 
@@ -62,5 +71,12 @@ public class ScoreDisplay : MonoBehaviour {
     private void SetBounceText(int value)
     {
         _bouncesText.text = value.ToString();
+    }
+
+    private void SetScoreColor(Color color1, Color color2, float score)
+    {
+        Color color = Color.Lerp(color1, color2, 0.01f*score);
+        _signalStrengthText.color = color;
+        _wifiImage.color = color;
     }
 }

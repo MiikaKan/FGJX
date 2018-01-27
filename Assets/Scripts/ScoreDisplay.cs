@@ -18,8 +18,6 @@ public class ScoreDisplay : MonoBehaviour {
     private Color[] _signalColors; 
 
     private float _score;
-    private Color _color = Color.white;
-
     public float Score
     {
         get
@@ -33,16 +31,7 @@ public class ScoreDisplay : MonoBehaviour {
             {
                 _score = value;
                 SetScoreText(_score);
-                if(_score < 1)
-                {
-                    _color = _signalColors[0];
-                    SetScoreColor(_color);
-                }
-                else
-                {
-                    _color = Color.Lerp(_signalColors[1], _signalColors[2], 0.01f * _score);
-                    SetScoreColor(_color);
-                }
+                SetScoreColor();
             }
         }
     }
@@ -82,9 +71,20 @@ public class ScoreDisplay : MonoBehaviour {
         _bouncesText.text = value.ToString();
     }
 
-    private void SetScoreColor(Color color)
+    private void SetScoreColor()
     {
+        Color color;
+        if (_score < 1)
+        {
+            color = _signalColors[0];
+        }
+        else
+        {
+            color = Color.Lerp(_signalColors[1], _signalColors[2], 0.01f * _score);
+        }
+
         _signalStrengthText.color = color;
         _wifiImage.color = color;
+        _wifiImage.fillAmount =  0.01f * _score;
     }
 }

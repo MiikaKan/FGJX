@@ -56,12 +56,6 @@ public class SignalTransmitter : MonoBehaviour {
                 if (bouncer)
                 {
                     _signalStrength *= bouncer.BounceAmount;
-
-                    // If signal strength is below 0, stop bouncing
-                    if (_signalStrength <= 0.05f)
-                    {
-                        return;
-                    }
                 }
 
                 // Reflect at same angle
@@ -71,6 +65,12 @@ public class SignalTransmitter : MonoBehaviour {
                 _lastPosition = hit.point;
                 _lineRenderer.positionCount++;
                 _lineRenderer.SetPosition(i, _lastPosition);
+
+                // If signal strength is below 0, stop bouncing
+                if (_signalStrength <= 0.5f)
+                {
+                    return;
+                }
             }
             else
             {

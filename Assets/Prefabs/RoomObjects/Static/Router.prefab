@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 120053740152849802}
   - component: {fileID: 114968698601667946}
   - component: {fileID: 65583757302399926}
+  - component: {fileID: 114270388021262506}
+  - component: {fileID: 114173303979963526}
   m_Layer: 0
   m_Name: Router
   m_TagString: Untagged
@@ -99,6 +101,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.429297, y: 0.66613704, z: 0.67535}
   m_Center: {x: 0.0021004975, y: 0.3294625, z: 0.054870993}
+--- !u!114 &114173303979963526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1297079884289004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb70a9745f489644b19d0f1521edfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114270388021262506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1297079884289004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114968698601667946
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114159856635674170}
   - component: {fileID: 65841540729783874}
   - component: {fileID: 114218728574075402}
+  - component: {fileID: 114224276674609584}
   m_Layer: 0
   m_Name: NightDesk
   m_TagString: Untagged
@@ -129,6 +130,17 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
+--- !u!114 &114224276674609584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1909395581987826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb70a9745f489644b19d0f1521edfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114251039653356100
 MonoBehaviour:
   m_ObjectHideFlags: 1

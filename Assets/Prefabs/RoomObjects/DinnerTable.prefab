@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114712413950147118}
   - component: {fileID: 114592151932961970}
   - component: {fileID: 65476369839863660}
-  - component: {fileID: 114589334666995014}
   m_Layer: 0
   m_Name: DinnerTable
   m_TagString: Untagged
@@ -100,21 +99,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.665379, y: 1.116277, z: 1.665378}
   m_Center: {x: 0.0000005066395, y: 0.5581385, z: 0}
---- !u!114 &114589334666995014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1194763277268720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: 0
-  eraseRenderer: 0
-  originalLayer: 0
-  originalMaterials: []
 --- !u!114 &114592151932961970
 MonoBehaviour:
   m_ObjectHideFlags: 1

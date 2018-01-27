@@ -25,6 +25,8 @@ public class LevelComplete : MonoBehaviour {
 
     private float _signalStrength;
     private float _points;
+    private int _pointCapGlorious;
+    private int _pointCapGodlike;
 
     public float SignalStrenght
     {
@@ -38,8 +40,8 @@ public class LevelComplete : MonoBehaviour {
             if (_signalStrength != value)
             {
                 _signalStrength = value;
-                SetScoreText(_signalStrength);
-                SetScoreColor();
+                SetSignalStrengthText(_signalStrength);
+                SetSignalStrengthColor();
             }
         }
     }
@@ -48,7 +50,7 @@ public class LevelComplete : MonoBehaviour {
     {
         get
         {
-            return _signalStrength * _bounces;
+            return _points;
         }
 
         set
@@ -82,15 +84,7 @@ public class LevelComplete : MonoBehaviour {
         }
     }
 
-
-    private void Start()
-    {
-        SignalStrenght = 60;
-        Bounces = 1;
-        Points = 120;
-    }
-
-    private void SetScoreText(float value)
+    private void SetSignalStrengthText(float value)
     {
         _signalStrengthAmount.text = Mathf.RoundToInt(value).ToString() + " %";
     }
@@ -105,7 +99,7 @@ public class LevelComplete : MonoBehaviour {
         _bouncesAmount.text = value.ToString();
     }
 
-    private void SetScoreColor()
+    private void SetSignalStrengthColor()
     {
         Color color;
         if (_signalStrength < 1)
@@ -118,8 +112,6 @@ public class LevelComplete : MonoBehaviour {
         }
 
         _signalStrengthAmount.color = color;
-        _wifiImage.color = color;
-        _wifiImage.fillAmount = 0.01f * _signalStrength;
     }
 
     private void SetBouncesColor()
@@ -140,21 +132,41 @@ public class LevelComplete : MonoBehaviour {
     private void SetPointsColorAndImages()
     {
         Color color;
-        if (_points < 100)
+        print("POINTS");
+        print(_points);
+        print(_pointCapGlorious);
+        print(_pointCapGodlike);
+        if (_points < _pointCapGlorious)
         {
+            print("MISERABLE");
             color = _signalColors[0];
             _ratingImage.sprite = _ratingSprites[0];
         }
-        else
+        else if(_pointCapGlorious <= _points && _points < _pointCapGodlike)
         {
+            print("FUK YE");
             color = _signalColors[1];
             _ratingImage.sprite = _ratingSprites[1];
+        }
+        else
+        {
+            print("GOOOD");
+            color = _signalColors[2];
+            _ratingImage.sprite = _ratingSprites[2];
         }
 
         _pointsAmount.color = color;
         _pointsLabel.color = color;
-        _wifiImage.color = color;
         _ratingImage.color = color;
-        _wifiImage.fillAmount = 0.01f * _signalStrength;   
+        _wifiImage.color = color;
+        _wifiImage.fillAmount = _points.Scale(0f, _pointCapGodlike, 0f, 1f);
+    }
+
+    public void SetLevelPointCaps(int capGlorious, int capGodlike)
+    {
+        _pointCapGlorious = capGlorious;
+        _pointCapGodlike = capGodlike;
+        print("capglio");
+        print(capGlorious);
     }
 }

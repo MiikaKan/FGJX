@@ -12,15 +12,18 @@ public class ScoreDisplay : MonoBehaviour {
     private float _score;
     public float Score
     {
-        private get
+        get
         {
             return _score;
         }
 
         set
         {
-            _score = value;
-            SetScoreText(_score);
+            if(_score != value)
+            {
+                _score = value;
+                SetScoreText(_score);
+            }
         }
     }
 

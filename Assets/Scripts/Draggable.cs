@@ -7,7 +7,7 @@ public class Draggable : MonoBehaviour {
     private Vector3 screenPoint;
     private Vector3 offset;
     [SerializeField]
-    private int rotationAmount = 45;
+    private int rotationAmount = 3;
 
     private void OnMouseDown()
     {

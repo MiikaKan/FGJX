@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 7b7dfedc483ae9042a1d4b2655d2fe66
+timeCreated: 1517054775
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: LAPTOP
+    100002: M_Bed
+    100004: M_Coffee_cup
+    100006: M_Dinner_chair_A
+    100008: M_Dinner_chair_B
+    100010: M_Dinner_table
+    100012: M_Fridge
+    100014: M_lamp
+    100016: M_Microwave
+    100018: M_Mirror
+    100020: M_Night_desk
+    100022: M_Rug
+    100024: M_Sofa_chair
+    100026: M_Trash_can
+    100028: M_Window_A
+    100030: M_Window_B
+    100032: M_Window_C
+    100034: //RootNode
+    100036: ROUTER
+    100038: S_door
+    100040: S_Kitchen_counter
+    100042: S_Room
+    100044: S_Sink
+    400000: LAPTOP
+    400002: M_Bed
+    400004: M_Coffee_cup
+    400006: M_Dinner_chair_A
+    400008: M_Dinner_chair_B
+    400010: M_Dinner_table
+    400012: M_Fridge
+    400014: M_lamp
+    400016: M_Microwave
+    400018: M_Mirror
+    400020: M_Night_desk
+    400022: M_Rug
+    400024: M_Sofa_chair
+    400026: M_Trash_can
+    400028: M_Window_A
+    400030: M_Window_B
+    400032: M_Window_C
+    400034: //RootNode
+    400036: ROUTER
+    400038: S_door
+    400040: S_Kitchen_counter
+    400042: S_Room
+    400044: S_Sink
+    2100000: I
+    2100002: H
+    2100004: J
+    2100006: P
+    2100008: F
+    2100010: G
+    2100012: M
+    2100014: N
+    2100016: L
+    2100018: O
+    2100020: A
+    2100022: R
+    2100024: Q
+    2100026: B
+    2100028: E
+    2100030: C
+    2100032: D
+    2300000: LAPTOP
+    2300002: M_Bed
+    2300004: M_Coffee_cup
+    2300006: M_Dinner_chair_A
+    2300008: M_Dinner_chair_B
+    2300010: M_Dinner_table
+    2300012: M_Fridge
+    2300014: M_lamp
+    2300016: M_Microwave
+    2300018: M_Mirror
+    2300020: M_Night_desk
+    2300022: M_Rug
+    2300024: M_Sofa_chair
+    2300026: M_Trash_can
+    2300028: M_Window_A
+    2300030: M_Window_B
+    2300032: M_Window_C
+    2300034: ROUTER
+    2300036: S_door
+    2300038: S_Kitchen_counter
+    2300040: S_Room
+    2300042: S_Sink
+    3300000: LAPTOP
+    3300002: M_Bed
+    3300004: M_Coffee_cup
+    3300006: M_Dinner_chair_A
+    3300008: M_Dinner_chair_B
+    3300010: M_Dinner_table
+    3300012: M_Fridge
+    3300014: M_lamp
+    3300016: M_Microwave
+    3300018: M_Mirror
+    3300020: M_Night_desk
+    3300022: M_Rug
+    3300024: M_Sofa_chair
+    3300026: M_Trash_can
+    3300028: M_Window_A
+    3300030: M_Window_B
+    3300032: M_Window_C
+    3300034: ROUTER
+    3300036: S_door
+    3300038: S_Kitchen_counter
+    3300040: S_Room
+    3300042: S_Sink
+    4300000: M_Dinner_chair_B
+    4300002: M_Window_C
+    4300004: M_Window_B
+    4300006: M_Night_desk
+    4300008: M_lamp
+    4300010: LAPTOP
+    4300012: M_Trash_can
+    4300014: ROUTER
+    4300016: M_Window_A
+    4300018: M_Bed
+    4300020: M_Sofa_chair
+    4300022: M_Rug
+    4300024: M_Dinner_chair_A
+    4300026: M_Dinner_table
+    4300028: S_Sink
+    4300030: M_Microwave
+    4300032: M_Mirror
+    4300034: M_Fridge
+    4300036: M_Coffee_cup
+    4300038: S_door
+    4300040: S_Kitchen_counter
+    4300042: S_Room
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,6 +10,9 @@ public class SignalTransmitter : MonoBehaviour {
 
     [SerializeField]
     private float _startingSignalStrength = 100f;
+    [SerializeField]
+    private int _maxBounces = 100;
+
     private float _signalStrength;
 
     private void Awake()
@@ -72,6 +75,11 @@ public class SignalTransmitter : MonoBehaviour {
             }
 
             i++;
+
+            if(i >= _maxBounces)
+            {
+                break;
+            }
         }
 
         // Set last line to be long (to appear to go on forever

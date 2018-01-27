@@ -15,14 +15,17 @@ public class Draggable : MonoBehaviour {
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
 
+    private void OnMouseOver()
+    {
+        gameObject.transform.Rotate(new Vector3(0, rotationAmount, 0) * Input.GetAxis("Mouse ScrollWheel") * 10);
+    }
+
     void OnMouseDrag()
     {
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         transform.position = curPosition;
-
-        gameObject.transform.Rotate(new Vector3(0, rotationAmount, 0) * Input.GetAxis("Mouse ScrollWheel") * 10);
 
         if (Input.GetKeyDown(KeyCode.Mouse2))
         {

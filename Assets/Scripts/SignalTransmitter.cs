@@ -9,7 +9,8 @@ public class SignalTransmitter : MonoBehaviour {
     private LineRenderer _lineRenderer;
 
     [SerializeField]
-    private float _signalStrength = 1f;
+    private float _startingSignalStrength = 100f;
+    private float _signalStrength;
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ public class SignalTransmitter : MonoBehaviour {
     {
         _lastPosition = transform.position;
         _direction = transform.forward;
-        _signalStrength = 1f;
+        _signalStrength = _startingSignalStrength;
 
         // Set line's first vertex to starting position
         _lineRenderer.positionCount = 1;
@@ -78,10 +79,5 @@ public class SignalTransmitter : MonoBehaviour {
         _lineRenderer.SetPosition(i, _lastPosition + _direction * 100);
 
         Debug.DrawRay(_lastPosition, Vector3.up, Color.yellow);
-    }
-
-    private void AddLineVertex(Vector3 position)
-    {
-
     }
 }

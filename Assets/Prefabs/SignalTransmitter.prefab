@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10dcdef1a7935e14dbf9bd185d3475c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVertices: 100
+  _signalStrength: 100
 --- !u!120 &120272637727997988
 LineRenderer:
   m_ObjectHideFlags: 1

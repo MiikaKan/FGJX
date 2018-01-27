@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33696480443295318}
   - component: {fileID: 65123846569252040}
   - component: {fileID: 23001012791839082}
+  - component: {fileID: 114623057562151006}
   m_Layer: 0
   m_Name: SignalReceiver
   m_TagString: Untagged
@@ -95,3 +96,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114623057562151006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724364575359662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8142f112b0a8e5469799ec772b62416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreDisplay: {fileID: 0}

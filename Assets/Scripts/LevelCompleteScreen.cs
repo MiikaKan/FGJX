@@ -108,6 +108,11 @@ public class LevelCompleteScreen : MonoBehaviour {
         _levelController.StartNextLevel();
     }
 
+    public void RestartLevel()
+    {
+        _levelController.RestartLevel();
+    }
+
     private void SetSignalStrengthText(float value)
     {
         _signalStrengthAmount.text = Mathf.RoundToInt(value).ToString() + " %";

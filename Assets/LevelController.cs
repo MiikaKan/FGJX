@@ -59,6 +59,7 @@ public class LevelController : MonoBehaviour {
     {
         ActiveLevelId = levelId;
         SceneManager.LoadScene(_levelDatas[levelId].sceneName);
+        _activeLevel = _levelDatas[levelId];
     }
 
     public void StartNextLevel()

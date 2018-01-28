@@ -58,7 +58,8 @@ public class LevelController : MonoBehaviour {
     public void StartLevel(int levelId)
     {
         ActiveLevelId = levelId;
-        SceneManager.LoadScene(_levelDatas[levelId].sceneName);
+        _activeLevel = _levelDatas[levelId];
+        SceneManager.LoadScene(_activeLevel.sceneName);
     }
 
     public void StartNextLevel()
@@ -84,5 +85,7 @@ public class LevelController : MonoBehaviour {
         }
 
         _levelCompleteScreen = FindObjectOfType<LevelCompleteScreen>();
+
+        _scoreDisplay.SetLevelTitle(ActiveLevelId, _activeLevel.sceneTitle);
     }
 }

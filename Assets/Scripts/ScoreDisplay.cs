@@ -7,6 +7,10 @@ using TMPro;
 public class ScoreDisplay : MonoBehaviour {
 
     [SerializeField]
+    private TextMeshProUGUI _levelIdText;
+    [SerializeField]
+    private TextMeshProUGUI _levelTitleText;
+    [SerializeField]
     private TextMeshProUGUI _scoreText;
     [SerializeField]
     private TextMeshProUGUI _bouncesText;
@@ -69,6 +73,12 @@ public class ScoreDisplay : MonoBehaviour {
     private void SetBounceText(int value)
     {
         _bouncesText.text = value.ToString();
+    }
+
+    public void SetLevelTitle(int id, string title)
+    {
+        _levelIdText.text = "LEVEL " + id + ":";
+        _levelTitleText.text = title.ToUpperInvariant();
     }
 
     private void SetScoreColor()

@@ -26,6 +26,7 @@ public class LevelController : MonoBehaviour {
 
     private levelData _activeLevel;
     public int ActiveLevelId { get; private set; }
+    public bool tutorialRead;
 
     public void CompleteLevel()
     {
@@ -41,6 +42,7 @@ public class LevelController : MonoBehaviour {
     {
         DontDestroyOnLoad(gameObject);
         _requiredReceivers = new List<SignalReceiver>();
+        tutorialRead = false;
     }
 
     private void CheckCompletion()
@@ -53,6 +55,12 @@ public class LevelController : MonoBehaviour {
         {
             _doneButton.Deactivate();
         }
+    }
+
+
+    public void SetTutorialRead()
+    {
+        tutorialRead = true;
     }
 
     public void StartLevel(int levelId)

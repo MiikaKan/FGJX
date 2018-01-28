@@ -88,9 +88,18 @@ public class ScoreDisplay : MonoBehaviour {
         {
             color = _signalColors[0];
         }
-        else
+        else if(_score >= 1 && _score < 40)
         {
             color = Color.Lerp(_signalColors[1], _signalColors[2], 0.01f * _score);
+        }
+        else if (_score >= 40 && _score < 80)
+        {
+            color = Color.Lerp(_signalColors[2], _signalColors[3], 0.01f * _score);
+        }
+
+        else
+        {
+            color = _signalColors[3];
         }
 
         _signalStrengthText.color = color;

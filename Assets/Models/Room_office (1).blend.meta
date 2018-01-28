@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: fd642948307917846955e7a84792ab48
+timeCreated: 1517134600
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Circle
+    100002: Clock
+    100004: Coffee_cup
+    100006: Coffee_machine
+    100008: COMPUTERO
+    100010: Copy_machine
+    100012: Corner_table
+    100014: Elevator
+    100016: Meeting_chair
+    100018: Meeting_table
+    100020: Office_chair
+    100022: Office_door
+    100024: Office_window
+    100026: Paper_board
+    100028: Pile_of_work
+    100030: Plant_round
+    100032: Plant_sharp
+    100034: //RootNode
+    100036: ROUTERO
+    100038: Standalone_table
+    100040: Swinging_door
+    100042: Temporary_wall
+    100044: Trash_can
+    100046: Wall_floor
+    100048: Water_cooler
+    400000: Circle
+    400002: Clock
+    400004: Coffee_cup
+    400006: Coffee_machine
+    400008: COMPUTERO
+    400010: Copy_machine
+    400012: Corner_table
+    400014: Elevator
+    400016: Meeting_chair
+    400018: Meeting_table
+    400020: Office_chair
+    400022: Office_door
+    400024: Office_window
+    400026: Paper_board
+    400028: Pile_of_work
+    400030: Plant_round
+    400032: Plant_sharp
+    400034: //RootNode
+    400036: ROUTERO
+    400038: Standalone_table
+    400040: Swinging_door
+    400042: Temporary_wall
+    400044: Trash_can
+    400046: Wall_floor
+    400048: Water_cooler
+    2100000: 11
+    2100002: 9
+    2100004: 1
+    2100006: 3
+    2100008: 2
+    2100010: 10
+    2100012: 8
+    2100014: 14
+    2100016: 12
+    2100018: 7
+    2100020: 4
+    2100022: 6
+    2100024: 5
+    2100026: 13
+    2300000: Circle
+    2300002: Clock
+    2300004: Coffee_cup
+    2300006: Coffee_machine
+    2300008: COMPUTERO
+    2300010: Copy_machine
+    2300012: Corner_table
+    2300014: Elevator
+    2300016: Meeting_chair
+    2300018: Meeting_table
+    2300020: Office_chair
+    2300022: Office_door
+    2300024: Office_window
+    2300026: Paper_board
+    2300028: Pile_of_work
+    2300030: Plant_round
+    2300032: Plant_sharp
+    2300034: ROUTERO
+    2300036: Standalone_table
+    2300038: Swinging_door
+    2300040: Temporary_wall
+    2300042: Trash_can
+    2300044: Wall_floor
+    2300046: Water_cooler
+    3300000: Circle
+    3300002: Clock
+    3300004: Coffee_cup
+    3300006: Coffee_machine
+    3300008: COMPUTERO
+    3300010: Copy_machine
+    3300012: Corner_table
+    3300014: Elevator
+    3300016: Meeting_chair
+    3300018: Meeting_table
+    3300020: Office_chair
+    3300022: Office_door
+    3300024: Office_window
+    3300026: Paper_board
+    3300028: Pile_of_work
+    3300030: Plant_round
+    3300032: Plant_sharp
+    3300034: ROUTERO
+    3300036: Standalone_table
+    3300038: Swinging_door
+    3300040: Temporary_wall
+    3300042: Trash_can
+    3300044: Wall_floor
+    3300046: Water_cooler
+    4300000: Circle
+    4300002: ROUTERO
+    4300004: Plant_round
+    4300006: Wall_floor
+    4300008: Elevator
+    4300010: Office_door
+    4300012: Standalone_table
+    4300014: Office_window
+    4300016: Pile_of_work
+    4300018: Temporary_wall
+    4300020: Meeting_chair
+    4300022: Meeting_table
+    4300024: Office_chair
+    4300026: Copy_machine
+    4300028: Paper_board
+    4300030: Clock
+    4300032: Plant_sharp
+    4300034: COMPUTERO
+    4300036: Coffee_machine
+    4300038: Water_cooler
+    4300040: Swinging_door
+    4300042: Corner_table
+    4300044: Coffee_cup
+    4300046: Trash_can
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

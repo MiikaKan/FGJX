@@ -21,9 +21,13 @@ public class LevelCompleteScreen : MonoBehaviour {
     [SerializeField]
     private Image _ratingImage;
     [SerializeField]
+    private Image _dudeImage;
+    [SerializeField]
     private Color[] _signalColors;
     [SerializeField]
     private Sprite[] _ratingSprites;
+    [SerializeField]
+    private Sprite[] _dudeSprites;
 
     private float _signalStrength;
     private float _points;
@@ -161,27 +165,23 @@ public class LevelCompleteScreen : MonoBehaviour {
     private void SetPointsColorAndImages()
     {
         Color color;
-        print("POINTS");
-        print(_points);
-        print(_pointCapGlorious);
-        print(_pointCapGodlike);
         if (_points < _pointCapGlorious)
         {
-            print("MISERABLE");
             color = _signalColors[0];
             _ratingImage.sprite = _ratingSprites[0];
+            _dudeImage.sprite = _dudeSprites[0];
         }
         else if(_pointCapGlorious <= _points && _points < _pointCapGodlike)
         {
-            print("FUK YE");
             color = _signalColors[1];
             _ratingImage.sprite = _ratingSprites[1];
+            _dudeImage.sprite = _dudeSprites[1];
         }
         else
         {
-            print("GOOOD");
             color = _signalColors[2];
             _ratingImage.sprite = _ratingSprites[2];
+            _dudeImage.sprite = _dudeSprites[2];
         }
 
         _pointsAmount.color = color;

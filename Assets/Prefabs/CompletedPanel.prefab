@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 222095930070543852}
   - component: {fileID: 114941065464776154}
   - component: {fileID: 114822865890249518}
+  - component: {fileID: 114522774673958594}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -301,7 +302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1455189869306064
 GameObject:
   m_ObjectHideFlags: 1
@@ -347,6 +348,7 @@ GameObject:
   - component: {fileID: 222964852750362164}
   - component: {fileID: 114106842967780084}
   - component: {fileID: 114905605835120352}
+  - component: {fileID: 114219931390566874}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -787,6 +789,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114219931390566874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542699413811428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691c7e3c3e1b9cb4ea45d10f4f34da79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114239768739665142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1437,6 +1450,17 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114522774673958594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285718150408134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691c7e3c3e1b9cb4ea45d10f4f34da79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114535361960140580
 MonoBehaviour:
   m_ObjectHideFlags: 1

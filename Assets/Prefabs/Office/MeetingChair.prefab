@@ -21,6 +21,11 @@ GameObject:
   - component: {fileID: 4567358012609870}
   - component: {fileID: 33339429527904220}
   - component: {fileID: 23132134610193654}
+  - component: {fileID: 114129896439052112}
+  - component: {fileID: 65440153244879758}
+  - component: {fileID: 114937977551334898}
+  - component: {fileID: 114949430734274502}
+  - component: {fileID: 114044364481776140}
   m_Layer: 0
   m_Name: MeetingChair
   m_TagString: Untagged
@@ -84,3 +89,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365563267274986}
   m_Mesh: {fileID: 4300020, guid: fd642948307917846955e7a84792ab48, type: 3}
+--- !u!65 &65440153244879758
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365563267274986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.95052, y: 1.970039, z: 1.060116}
+  m_Center: {x: 0, y: 0.9850195, z: -0.012703985}
+--- !u!114 &114044364481776140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365563267274986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf632ea4060cef448f9e80a0a6feefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: 3
+--- !u!114 &114129896439052112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365563267274986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceAmount: 1
+--- !u!114 &114937977551334898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365563267274986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
+--- !u!114 &114949430734274502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365563267274986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb70a9745f489644b19d0f1521edfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

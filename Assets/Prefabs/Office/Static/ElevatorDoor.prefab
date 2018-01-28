@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4785916057414520}
   - component: {fileID: 33776674923281018}
   - component: {fileID: 23754404633748124}
+  - component: {fileID: 114086101207759820}
+  - component: {fileID: 65655116022398324}
   m_Layer: 0
   m_Name: ElevatorDoor
   m_TagString: Untagged
@@ -84,3 +86,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964468449116908}
   m_Mesh: {fileID: 4300008, guid: fd642948307917846955e7a84792ab48, type: 3}
+--- !u!65 &65655116022398324
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964468449116908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.70302, y: 4.045372, z: 0.289563}
+  m_Center: {x: 0.23426104, y: 2.022686, z: 0.013974503}
+--- !u!114 &114086101207759820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964468449116908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceAmount: 1

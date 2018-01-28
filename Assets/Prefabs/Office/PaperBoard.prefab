@@ -21,6 +21,11 @@ GameObject:
   - component: {fileID: 4262337958303740}
   - component: {fileID: 33483957028770436}
   - component: {fileID: 23147894543250504}
+  - component: {fileID: 114503232761756320}
+  - component: {fileID: 65592173763167268}
+  - component: {fileID: 114886082019459970}
+  - component: {fileID: 114298638111989300}
+  - component: {fileID: 114033015137292542}
   m_Layer: 0
   m_Name: PaperBoard
   m_TagString: Untagged
@@ -84,3 +89,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1933898453431580}
   m_Mesh: {fileID: 4300028, guid: fd642948307917846955e7a84792ab48, type: 3}
+--- !u!65 &65592173763167268
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933898453431580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.892457, y: 4.0879216, z: 2.033014}
+  m_Center: {x: -0.00000047683716, y: 2.041692, z: 0}
+--- !u!114 &114033015137292542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933898453431580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf632ea4060cef448f9e80a0a6feefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: 3
+--- !u!114 &114298638111989300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933898453431580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb70a9745f489644b19d0f1521edfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114503232761756320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933898453431580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceAmount: 1
+--- !u!114 &114886082019459970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933898453431580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []

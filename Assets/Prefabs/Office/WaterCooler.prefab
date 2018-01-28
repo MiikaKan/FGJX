@@ -21,6 +21,11 @@ GameObject:
   - component: {fileID: 4387900319947102}
   - component: {fileID: 33595200349633654}
   - component: {fileID: 23340376648212092}
+  - component: {fileID: 114423155158030546}
+  - component: {fileID: 65688550607674936}
+  - component: {fileID: 114803167596702808}
+  - component: {fileID: 114194615485776894}
+  - component: {fileID: 114935210613599362}
   m_Layer: 0
   m_Name: WaterCooler
   m_TagString: Untagged
@@ -84,3 +89,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886014104977552}
   m_Mesh: {fileID: 4300038, guid: fd642948307917846955e7a84792ab48, type: 3}
+--- !u!65 &65688550607674936
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886014104977552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.245066, y: 3.363258, z: 1.0713911}
+  m_Center: {x: -0.122419, y: 1.681629, z: 0.0355815}
+--- !u!114 &114194615485776894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886014104977552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb70a9745f489644b19d0f1521edfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114423155158030546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886014104977552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceAmount: 1
+--- !u!114 &114803167596702808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886014104977552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
+--- !u!114 &114935210613599362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1886014104977552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf632ea4060cef448f9e80a0a6feefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: 3

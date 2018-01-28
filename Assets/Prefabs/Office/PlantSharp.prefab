@@ -21,6 +21,11 @@ GameObject:
   - component: {fileID: 4964726480013676}
   - component: {fileID: 33784886916253508}
   - component: {fileID: 23046340233861844}
+  - component: {fileID: 114519506606929592}
+  - component: {fileID: 65636642274425842}
+  - component: {fileID: 114337813896458568}
+  - component: {fileID: 114743478109765856}
+  - component: {fileID: 114073049977671440}
   m_Layer: 0
   m_Name: PlantSharp
   m_TagString: Untagged
@@ -87,3 +92,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1528578431551248}
   m_Mesh: {fileID: 4300032, guid: fd642948307917846955e7a84792ab48, type: 3}
+--- !u!65 &65636642274425842
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528578431551248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5309579, y: 2.054721, z: 1.514683}
+  m_Center: {x: -0.07202199, y: 1.0273606, z: 0.067771494}
+--- !u!114 &114073049977671440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528578431551248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf632ea4060cef448f9e80a0a6feefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: 3
+--- !u!114 &114337813896458568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528578431551248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
+--- !u!114 &114519506606929592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528578431551248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceAmount: 1
+--- !u!114 &114743478109765856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528578431551248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb70a9745f489644b19d0f1521edfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

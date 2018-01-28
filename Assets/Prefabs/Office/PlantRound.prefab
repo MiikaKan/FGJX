@@ -21,6 +21,11 @@ GameObject:
   - component: {fileID: 4831403369755614}
   - component: {fileID: 33286748387702054}
   - component: {fileID: 23560159124389152}
+  - component: {fileID: 114882547129087528}
+  - component: {fileID: 65988366398554178}
+  - component: {fileID: 114490234079393334}
+  - component: {fileID: 114992343003333250}
+  - component: {fileID: 114398284175859308}
   m_Layer: 0
   m_Name: PlantRound
   m_TagString: Untagged
@@ -87,3 +92,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626705674153396}
   m_Mesh: {fileID: 4300004, guid: fd642948307917846955e7a84792ab48, type: 3}
+--- !u!65 &65988366398554178
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626705674153396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.042665, y: 2.250319, z: 0.934125}
+  m_Center: {x: 0.041252494, y: 1.1251595, z: 0.08748451}
+--- !u!114 &114398284175859308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626705674153396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf632ea4060cef448f9e80a0a6feefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: 3
+--- !u!114 &114490234079393334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626705674153396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
+--- !u!114 &114882547129087528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626705674153396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceAmount: 1
+--- !u!114 &114992343003333250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626705674153396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb70a9745f489644b19d0f1521edfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

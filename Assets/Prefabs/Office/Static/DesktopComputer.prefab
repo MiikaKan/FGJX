@@ -21,6 +21,10 @@ GameObject:
   - component: {fileID: 4373376853431636}
   - component: {fileID: 33503836476422738}
   - component: {fileID: 23097241916068536}
+  - component: {fileID: 114681607908118754}
+  - component: {fileID: 114144599664020696}
+  - component: {fileID: 114491224267031936}
+  - component: {fileID: 65269770074211754}
   m_Layer: 0
   m_Name: DesktopComputer
   m_TagString: Untagged
@@ -84,3 +88,58 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1893965601101624}
   m_Mesh: {fileID: 4300034, guid: fd642948307917846955e7a84792ab48, type: 3}
+--- !u!65 &65269770074211754
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1893965601101624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8138001, y: 3.66, z: 1.1509681}
+  m_Center: {x: 0.07042101, y: 0.95, z: -0.23809502}
+--- !u!114 &114144599664020696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1893965601101624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb70a9745f489644b19d0f1521edfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114491224267031936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1893965601101624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8142f112b0a8e5469799ec772b62416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreDisplay: {fileID: 0}
+  OnReceiveStatusChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114681607908118754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1893965601101624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []

@@ -9,6 +9,8 @@ public class LevelCompleteScreen : MonoBehaviour {
     [SerializeField]
     private RectTransform _contentsPanel;
     [SerializeField]
+    private TextMeshProUGUI _titleLabel;
+    [SerializeField]
     private TextMeshProUGUI _pointsAmount;
     [SerializeField]
     private TextMeshProUGUI _pointsLabel;
@@ -178,21 +180,21 @@ public class LevelCompleteScreen : MonoBehaviour {
             color = _signalColors[0];
             _ratingImage.sprite = _ratingSprites[0];
             _dudeImage.sprite = _dudeSprites[0];
-            AudioSource.PlayClipAtPoint(_mediocreSound, Vector3.zero);
+            AudioSource.PlayClipAtPoint(_mediocreSound, Camera.main.transform.position, 0.2f);
         }
         else if(_pointCapGlorious <= _points && _points < _pointCapGodlike)
         {
             color = _signalColors[1];
             _ratingImage.sprite = _ratingSprites[1];
             _dudeImage.sprite = _dudeSprites[1];
-            AudioSource.PlayClipAtPoint(_gloriousSound, Vector3.zero);
+            AudioSource.PlayClipAtPoint(_gloriousSound, Camera.main.transform.position, 0.2f);
         }
         else
         {
             color = _signalColors[2];
             _ratingImage.sprite = _ratingSprites[2];
             _dudeImage.sprite = _dudeSprites[2];
-            AudioSource.PlayClipAtPoint(_godlikeSound, Vector3.zero);
+            AudioSource.PlayClipAtPoint(_godlikeSound, Camera.main.transform.position, 0.2f);
         }
 
         _pointsAmount.color = color;
@@ -200,6 +202,11 @@ public class LevelCompleteScreen : MonoBehaviour {
         _ratingImage.color = color;
         _wifiImage.color = color;
         _wifiImage.fillAmount = _points.Scale(0f, _pointCapGodlike, 0f, 1f);
+    }
+
+    public void SetLevelTitle(int levelid)
+    {
+        _titleLabel.text = "LEVEL " + levelid + " COMPLETE";
     }
 
     public void SetLevelPointCaps(int capGlorious, int capGodlike)

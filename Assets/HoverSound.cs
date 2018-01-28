@@ -15,6 +15,6 @@ public class HoverSound : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData data)
     {
-        AudioSource.PlayClipAtPoint(_hoverSound, Vector3.zero);
+        AudioSource.PlayClipAtPoint(_hoverSound, Camera.main.transform.position, 0.1f);
     }
 }

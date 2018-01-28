@@ -27,7 +27,7 @@ public class DoneButton : MonoBehaviour {
             _button.onClick.AddListener(_levelController.CompleteLevel);
             _button.onClick.AddListener(() =>
             {
-                AudioSource.PlayClipAtPoint(_doneSound, Vector3.zero);
+                AudioSource.PlayClipAtPoint(_doneSound, Camera.main.transform.position, 0.1f);
             });
         }
     }

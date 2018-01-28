@@ -10,6 +10,30 @@ public class DoneButton : MonoBehaviour {
     [SerializeField]
     private Button _button;
 
+    private LevelController _levelController;
+
+    private void Start()
+    {
+        _button = GetComponent<Button>();
+        _levelController = FindObjectOfType<LevelController>();
+
+        if (!_levelController)
+        {
+            Debug.LogError("Couldn'´t find LevelController!");
+        }
+        else {
+            _button.onClick.AddListener(_levelController.CompleteLevel);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (_button)
+        {
+            _button.onClick.RemoveAllListeners();
+        }
+    }
+
     public void Activate()
     {
         _fader.enabled = false;

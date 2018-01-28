@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class LevelComplete : MonoBehaviour {
+public class LevelCompleteScreen : MonoBehaviour {
 
+    [SerializeField]
+    private RectTransform _contentsPanel;
     [SerializeField]
     private TextMeshProUGUI _pointsAmount;
     [SerializeField]
@@ -28,7 +30,9 @@ public class LevelComplete : MonoBehaviour {
     private int _pointCapGlorious;
     private int _pointCapGodlike;
 
-    public float SignalStrenght
+    private LevelController _levelController;
+
+    public float SignalStrength
     {
         get
         {
@@ -82,6 +86,26 @@ public class LevelComplete : MonoBehaviour {
                 SetBouncesColor();
             }
         }
+    }
+
+    private void Start()
+    {
+        _levelController = FindObjectOfType<LevelController>();
+    }
+
+    public void Show()
+    {
+        _contentsPanel.gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        _contentsPanel.gameObject.SetActive(false);
+    }
+
+    public void NextLevel()
+    {
+        _levelController.StartNextLevel();
     }
 
     private void SetSignalStrengthText(float value)

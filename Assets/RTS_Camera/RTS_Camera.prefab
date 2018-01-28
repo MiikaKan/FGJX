@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8165074}
   - component: {fileID: 11488424}
   - component: {fileID: 11455738}
-  - component: {fileID: 114501842854733578}
   - component: {fileID: 114301055954550330}
   m_Layer: 0
   m_Name: RTS_Camera
@@ -30,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120296}
   m_LocalRotation: {x: 0.7071069, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: 0, y: 12.5, z: 0}
+  m_LocalPosition: {x: -9.8, y: 12.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4962041362600138}
@@ -268,26 +267,3 @@ MonoBehaviour:
   outlineShaderMaterial: {fileID: 0}
   renderTexture: {fileID: 0}
   extraRenderTexture: {fileID: 0}
---- !u!114 &114501842854733578
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4397a4dca7f9a34a97a80f42389c8af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _requiredReceivers:
-  - {fileID: 0}
-  _doneButton: {fileID: 0}
-  _levelDatas:
-  - sceneName: main
-    pointCapGlorious: 100
-    pointCapGodlike: 200
-  _levelComplete: {fileID: 0}
-  _gameScores: {fileID: 0}
-  _scoreDisplay: {fileID: 0}
-  _levelCompleteDisplay: {fileID: 0}
-  _doneButtonDisplay: {fileID: 0}

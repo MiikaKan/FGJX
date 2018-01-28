@@ -2,54 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour {
-
-    [SerializeField]
-    private List<SignalReceiver> _requiredReceivers;
-    [SerializeField]
-    private DoneButton _doneButton;
 
     [System.Serializable]
     public struct levelData
     {
         public string sceneName;
+        public string sceneTitle;
         public int pointCapGlorious;
         public int pointCapGodlike;
     }
 
     [SerializeField]
     private List<levelData> _levelDatas;
-    [SerializeField]
-    private LevelComplete _levelComplete;
-    [SerializeField]
-    private ScoreDisplay _gameScores;
-    [SerializeField]
-    private GameObject _scoreDisplay;
-    [SerializeField]
-    private GameObject _levelCompleteDisplay;
-    [SerializeField]
-    private GameObject _doneButtonDisplay;
+
+    private LevelCompleteScreen _levelCompleteScreen;
+    private List<SignalReceiver> _requiredReceivers;
+    private DoneButton _doneButton;
+
+    private ScoreDisplay _scoreDisplay;
 
     private levelData _activeLevel;
+    public int ActiveLevelId { get; private set; }
 
     public void CompleteLevel()
     {
-        _scoreDisplay.SetActive(false);
-        _doneButtonDisplay.SetActive(false);
-        _levelCompleteDisplay.SetActive(true);
-        _levelComplete.SignalStrenght = _gameScores.Score;
-        _levelComplete.Bounces = _gameScores.Bounces;
-        _levelComplete.SetLevelPointCaps(_levelDatas[0].pointCapGlorious, _levelDatas[0].pointCapGodlike);
-        _levelComplete.Points = Mathf.RoundToInt(_gameScores.Score) * Mathf.RoundToInt(_gameScores.Bounces);
+        _scoreDisplay.gameObject.SetActive(false);
+        _levelCompleteScreen.Show();
+        _levelCompleteScreen.SignalStrength = _scoreDisplay.Score;
+        _levelCompleteScreen.Bounces = _scoreDisplay.Bounces;
+        _levelCompleteScreen.SetLevelPointCaps(_levelDatas[0].pointCapGlorious, _levelDatas[0].pointCapGodlike);
+        _levelCompleteScreen.Points = Mathf.RoundToInt(_scoreDisplay.Score) * Mathf.RoundToInt(_scoreDisplay.Bounces);
     }
 
     private void Start()
     {
-        foreach (var receiver in _requiredReceivers)
-        {
-            receiver.OnReceiveStatusChanged.AddListener(CheckCompletion);
-        }
+        DontDestroyOnLoad(gameObject);
+        _requiredReceivers = new List<SignalReceiver>();
     }
 
     private void CheckCompletion()
@@ -64,4 +55,34 @@ public class LevelController : MonoBehaviour {
         }
     }
 
+    public void StartLevel(int levelId)
+    {
+        ActiveLevelId = levelId;
+        SceneManager.LoadScene(_levelDatas[levelId].sceneName);
+    }
+
+    public void StartNextLevel()
+    {
+        StartLevel(ActiveLevelId + 1);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(_activeLevel.sceneName);
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        _scoreDisplay = FindObjectOfType<ScoreDisplay>();
+        _doneButton = FindObjectOfType<DoneButton>();
+
+        _requiredReceivers.Clear();
+        _requiredReceivers.AddRange(FindObjectsOfType<SignalReceiver>());
+        foreach (var receiver in _requiredReceivers)
+        {
+            receiver.OnReceiveStatusChanged.AddListener(CheckCompletion);
+        }
+
+        _levelCompleteScreen = FindObjectOfType<LevelCompleteScreen>();
+    }
 }

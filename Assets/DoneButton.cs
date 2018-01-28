@@ -11,9 +11,11 @@ public class DoneButton : MonoBehaviour {
     private Button _button;
 
     private LevelController _levelController;
+    private AudioClip _doneSound;
 
     private void Start()
     {
+        _doneSound = Resources.Load("StartGame") as AudioClip;
         _button = GetComponent<Button>();
         _levelController = FindObjectOfType<LevelController>();
 
@@ -23,6 +25,10 @@ public class DoneButton : MonoBehaviour {
         }
         else {
             _button.onClick.AddListener(_levelController.CompleteLevel);
+            _button.onClick.AddListener(() =>
+            {
+                AudioSource.PlayClipAtPoint(_doneSound, Vector3.zero);
+            });
         }
     }
 

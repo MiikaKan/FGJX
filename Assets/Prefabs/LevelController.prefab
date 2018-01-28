@@ -288,13 +288,13 @@ MonoBehaviour:
   _levelDatas:
   - sceneName: Apartment1
     sceneTitle: Humble beginnings
-    pointCapGlorious: 700
-    pointCapGodlike: 2000
+    pointCapGlorious: 500
+    pointCapGodlike: 900
   - sceneName: Apartment2
     sceneTitle: Cooking time
-    pointCapGlorious: 1500
-    pointCapGodlike: 5000
+    pointCapGlorious: 500
+    pointCapGodlike: 900
   - sceneName: Office1
     sceneTitle: You got hired
-    pointCapGlorious: 2000
-    pointCapGodlike: 7500
+    pointCapGlorious: 500
+    pointCapGodlike: 900

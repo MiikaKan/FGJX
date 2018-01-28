@@ -13,6 +13,8 @@ public class SignalTransmitter : MonoBehaviour {
     [SerializeField]
     private int _maxBounces = 100;
     [SerializeField]
+    private float _minBounceAngle = 5f;
+    [SerializeField]
     private ScoreDisplay _scoreDisplay;
 
     private float _signalStrength;
@@ -59,7 +61,16 @@ public class SignalTransmitter : MonoBehaviour {
                 }
 
                 // Reflect at same angle
+                Vector3 oldDirection = _direction;
                 _direction = Vector3.Reflect(_direction, hit.normal);
+
+                // If angle is too small, stop bouncing
+                if (180f - Vector3.Angle(_direction, oldDirection) < _minBounceAngle)
+                {
+                    _lineRenderer.positionCount++;
+                    _lineRenderer.SetPosition(i, hit.point);
+                    return;
+                }
 
                 // Restart from this point, add this point to line
                 _lastPosition = hit.point;

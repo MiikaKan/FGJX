@@ -60,3 +60,7 @@ MonoBehaviour:
     sceneTitle: Cooking time
     pointCapGlorious: 100
     pointCapGodlike: 200
+  - sceneName: Office1
+    sceneTitle: You got hired
+    pointCapGlorious: 200
+    pointCapGodlike: 400

@@ -16,4 +16,7 @@ EditorBuildSettings:
     guid: 4b9a5dfc320bb9241a6ab045e468a32b
   - enabled: 1
     path: Assets/Scenes/Apartment2.unity
+    guid: 2abde960a03bbae478e25a1ed177e25a
+  - enabled: 1
+    path: Assets/Scenes/Office1.unity
     guid: ec9f6396f1c873845a403216db2a0a8c

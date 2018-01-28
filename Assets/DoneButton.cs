@@ -37,10 +37,12 @@ public class DoneButton : MonoBehaviour {
     public void Activate()
     {
         _fader.enabled = false;
+        _button.interactable = true;
     }
 
     public void Deactivate()
     {
         _fader.enabled = true;
+        _button.interactable = false;
     }
 }

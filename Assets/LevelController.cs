@@ -87,5 +87,7 @@ public class LevelController : MonoBehaviour {
         _levelCompleteScreen = FindObjectOfType<LevelCompleteScreen>();
 
         _scoreDisplay.SetLevelTitle(ActiveLevelId, _activeLevel.sceneTitle);
+
+        _doneButton.Deactivate();
     }
 }

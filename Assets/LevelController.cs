@@ -30,11 +30,11 @@ public class LevelController : MonoBehaviour {
     public void CompleteLevel()
     {
         _scoreDisplay.gameObject.SetActive(false);
-        _levelCompleteScreen.Show();
         _levelCompleteScreen.SignalStrength = _scoreDisplay.Score;
         _levelCompleteScreen.Bounces = _scoreDisplay.Bounces;
         _levelCompleteScreen.SetLevelPointCaps(_levelDatas[0].pointCapGlorious, _levelDatas[0].pointCapGodlike);
         _levelCompleteScreen.Points = Mathf.RoundToInt(_scoreDisplay.Score) * Mathf.RoundToInt(_scoreDisplay.Bounces);
+        _levelCompleteScreen.Show();
     }
 
     private void Start()

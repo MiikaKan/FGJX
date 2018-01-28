@@ -34,6 +34,10 @@ public class LevelCompleteScreen : MonoBehaviour {
     private int _pointCapGlorious;
     private int _pointCapGodlike;
 
+    private AudioClip _mediocreSound;
+    private AudioClip _gloriousSound;
+    private AudioClip _godlikeSound;
+
     private LevelController _levelController;
 
     public float SignalStrength
@@ -95,6 +99,10 @@ public class LevelCompleteScreen : MonoBehaviour {
     private void Start()
     {
         _levelController = FindObjectOfType<LevelController>();
+
+        _mediocreSound = Resources.Load("Mediocre") as AudioClip;
+        _gloriousSound = Resources.Load("Glorious") as AudioClip;
+        _godlikeSound = Resources.Load("Godlike") as AudioClip;
     }
 
     public void Show()
@@ -170,18 +178,21 @@ public class LevelCompleteScreen : MonoBehaviour {
             color = _signalColors[0];
             _ratingImage.sprite = _ratingSprites[0];
             _dudeImage.sprite = _dudeSprites[0];
+            AudioSource.PlayClipAtPoint(_mediocreSound, Vector3.zero);
         }
         else if(_pointCapGlorious <= _points && _points < _pointCapGodlike)
         {
             color = _signalColors[1];
             _ratingImage.sprite = _ratingSprites[1];
             _dudeImage.sprite = _dudeSprites[1];
+            AudioSource.PlayClipAtPoint(_gloriousSound, Vector3.zero);
         }
         else
         {
             color = _signalColors[2];
             _ratingImage.sprite = _ratingSprites[2];
             _dudeImage.sprite = _dudeSprites[2];
+            AudioSource.PlayClipAtPoint(_godlikeSound, Vector3.zero);
         }
 
         _pointsAmount.color = color;

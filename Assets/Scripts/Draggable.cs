@@ -1,13 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Draggable : MonoBehaviour {
 
-    private Vector3 screenPoint;
-    private Vector3 offset;
-    [SerializeField]
-    private int rotationAmount = 3;
+    private Vector3 _screenPoint;
+    private Vector3 _offset;
+    private GameConstants _gameConstants;
     private AudioClip _pickUpSound;
     private AudioClip _putDownSound;
 
@@ -15,18 +14,19 @@ public class Draggable : MonoBehaviour {
     {
         _pickUpSound = Resources.Load("PickUp") as AudioClip;
         _putDownSound = Resources.Load("PutDown") as AudioClip;
+        _gameConstants = Resources.Load("GameConstants") as GameConstants;
     }
 
     private void OnMouseDown()
     {
-        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        _screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        _offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z));
         AudioSource.PlayClipAtPoint(_pickUpSound, transform.position);
     }
 
     private void OnMouseOver()
     {
-        gameObject.transform.Rotate(new Vector3(0, rotationAmount, 0) * Input.GetAxis("Mouse ScrollWheel") * 10);
+        gameObject.transform.Rotate(new Vector3(0, _gameConstants.RotationAngle, 0) * Input.GetAxis("Mouse ScrollWheel") * 10);
     }
 
     private void OnMouseUp()
@@ -36,9 +36,9 @@ public class Draggable : MonoBehaviour {
 
     void OnMouseDrag()
     {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, _screenPoint.z);
 
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + _offset;
         transform.position = curPosition;
 
         if (Input.GetKeyDown(KeyCode.Mouse2))

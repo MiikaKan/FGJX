@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,16 +7,17 @@ using UnityEngine.SceneManagement;
 public class LevelController : MonoBehaviour {
 
     [System.Serializable]
-    public struct levelData
+    public struct LevelData
     {
-        public string sceneName;
-        public string sceneTitle;
-        public int pointCapGlorious;
-        public int pointCapGodlike;
+        public string SceneName;
+        public string SceneTitle;
+        public int PointCapFail;
+        public int PointCapGood;
+        public int PointCapGreat;
     }
 
     [SerializeField]
-    private List<levelData> _levelDatas;
+    private List<LevelData> _levelDatas;
 
     private LevelCompleteScreen _levelCompleteScreen;
     private List<SignalReceiver> _requiredReceivers;
@@ -24,18 +25,16 @@ public class LevelController : MonoBehaviour {
 
     private ScoreDisplay _scoreDisplay;
 
-    private levelData _activeLevel;
+    private LevelData _activeLevel;
     public int ActiveLevelId { get; private set; }
-    public bool tutorialRead;
+    public bool TutorialRead;
 
     public void CompleteLevel()
     {
         _scoreDisplay.gameObject.SetActive(false);
         _levelCompleteScreen.SignalStrength = _scoreDisplay.Score;
-        _levelCompleteScreen.Bounces = _scoreDisplay.Bounces;
         _levelCompleteScreen.SetLevelTitle(ActiveLevelId);
-        _levelCompleteScreen.SetLevelPointCaps(_levelDatas[0].pointCapGlorious, _levelDatas[0].pointCapGodlike);
-        _levelCompleteScreen.Points = Mathf.RoundToInt(_scoreDisplay.Score) * Mathf.RoundToInt(_scoreDisplay.Bounces);
+        _levelCompleteScreen.SetPointCaps(_activeLevel.PointCapFail, _activeLevel.PointCapGood, _activeLevel.PointCapGreat);
         _levelCompleteScreen.Show();
     }
 
@@ -43,7 +42,7 @@ public class LevelController : MonoBehaviour {
     {
         DontDestroyOnLoad(gameObject);
         _requiredReceivers = new List<SignalReceiver>();
-        tutorialRead = false;
+        TutorialRead = false;
     }
 
     private void CheckCompletion()
@@ -61,14 +60,14 @@ public class LevelController : MonoBehaviour {
 
     public void SetTutorialRead()
     {
-        tutorialRead = true;
+        TutorialRead = true;
     }
 
     public void StartLevel(int levelId)
     {
         ActiveLevelId = levelId;
         _activeLevel = _levelDatas[levelId];
-        SceneManager.LoadScene(_activeLevel.sceneName);
+        SceneManager.LoadScene(_activeLevel.SceneName);
     }
 
     public void StartNextLevel()
@@ -78,7 +77,7 @@ public class LevelController : MonoBehaviour {
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(_activeLevel.sceneName);
+        SceneManager.LoadScene(_activeLevel.SceneName);
     }
 
     private void OnLevelWasLoaded(int level)
@@ -95,7 +94,7 @@ public class LevelController : MonoBehaviour {
 
         _levelCompleteScreen = FindObjectOfType<LevelCompleteScreen>();
 
-        _scoreDisplay.SetLevelTitle(ActiveLevelId, _activeLevel.sceneTitle);
+        _scoreDisplay.SetLevelTitle(ActiveLevelId, _activeLevel.SceneTitle);
 
         _doneButton.Deactivate();
     }

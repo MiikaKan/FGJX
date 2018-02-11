@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +13,7 @@ public class TutorialController : MonoBehaviour
     {
 
         LevelController levelController = (LevelController)FindObjectOfType(typeof(LevelController));
-        if (levelController.tutorialRead)
+        if (levelController.TutorialRead)
         {
             _introPanel.SetActive(false);
         }

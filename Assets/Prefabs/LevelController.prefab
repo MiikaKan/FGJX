@@ -286,15 +286,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelDatas:
-  - sceneName: Apartment1
-    sceneTitle: Humble beginnings
-    pointCapGlorious: 500
-    pointCapGodlike: 900
-  - sceneName: Apartment2
-    sceneTitle: Cooking time
-    pointCapGlorious: 500
-    pointCapGodlike: 900
-  - sceneName: Office1
-    sceneTitle: You got hired
-    pointCapGlorious: 500
-    pointCapGodlike: 900
+  - SceneName: Apartment1
+    SceneTitle: Apartment1
+    PointCapFail: 80
+    PointCapGood: 150
+    PointCapGreat: 250
+  - SceneName: Apartment2
+    SceneTitle: Apartment2
+    PointCapFail: 80
+    PointCapGood: 150
+    PointCapGreat: 250
+  - SceneName: Office1
+    SceneTitle: Office1
+    PointCapFail: 80
+    PointCapGood: 150
+    PointCapGreat: 250
+  TutorialRead: 0

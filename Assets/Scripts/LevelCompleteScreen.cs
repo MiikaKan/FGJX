@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,13 +11,9 @@ public class LevelCompleteScreen : MonoBehaviour {
     [SerializeField]
     private TextMeshProUGUI _titleLabel;
     [SerializeField]
-    private TextMeshProUGUI _pointsAmount;
+    private TextMeshProUGUI _signalStrengthLabel;
     [SerializeField]
-    private TextMeshProUGUI _pointsLabel;
-    [SerializeField]
-    private TextMeshProUGUI _bouncesAmount;
-    [SerializeField]
-    private TextMeshProUGUI _signalStrengthAmount;
+    private TextMeshProUGUI _signalStrengthText;
     [SerializeField]
     private Image _wifiImage;
     [SerializeField]
@@ -32,9 +28,10 @@ public class LevelCompleteScreen : MonoBehaviour {
     private Sprite[] _dudeSprites;
 
     private float _signalStrength;
-    private float _points;
-    private int _pointCapGlorious;
-    private int _pointCapGodlike;
+
+    private int _pointCapFail = 80;
+    private int _pointCapGood = 150;
+    private int _pointCapGreat = 250;
 
     private AudioClip _mediocreSound;
     private AudioClip _gloriousSound;
@@ -56,44 +53,7 @@ public class LevelCompleteScreen : MonoBehaviour {
                 _signalStrength = value;
                 SetSignalStrengthText(_signalStrength);
                 SetSignalStrengthColor();
-            }
-        }
-    }
-
-    public float Points
-    {
-        get
-        {
-            return _points;
-        }
-
-        set
-        {
-            print(value);
-            if (_points != value)
-            {
-                _points = value;
-                SetPointsText(_points);
                 SetPointsColorAndImages();
-            }
-        }
-    }
-
-    private int _bounces;
-    public int Bounces
-    {
-        get
-        {
-            return _bounces;
-        }
-
-        set
-        {
-            if (_bounces != value)
-            {
-                _bounces = value;
-                SetBounceText(_bounces);
-                SetBouncesColor();
             }
         }
     }
@@ -129,17 +89,7 @@ public class LevelCompleteScreen : MonoBehaviour {
 
     private void SetSignalStrengthText(float value)
     {
-        _signalStrengthAmount.text = Mathf.RoundToInt(value).ToString() + " %";
-    }
-
-    private void SetPointsText(float value)
-    {
-        _pointsAmount.text = Mathf.RoundToInt(value).ToString();
-    }
-
-    private void SetBounceText(int value)
-    {
-        _bouncesAmount.text = value.ToString();
+        _signalStrengthText.text = Mathf.RoundToInt(value).ToString() + " %";
     }
 
     private void SetSignalStrengthColor()
@@ -154,35 +104,20 @@ public class LevelCompleteScreen : MonoBehaviour {
             color = Color.Lerp(_signalColors[1], _signalColors[2], 0.01f * _signalStrength);
         }
 
-        _signalStrengthAmount.color = color;
-    }
-
-    private void SetBouncesColor()
-    {
-        Color color;
-        if (_bounces < 3)
-        {
-            color = _signalColors[0];
-        }
-        else
-        {
-            color = _signalColors[1];
-        }
-
-        _bouncesAmount.color = color;
+        _signalStrengthText.color = color;
     }
 
     private void SetPointsColorAndImages()
     {
         Color color;
-        if (_points < _pointCapGlorious)
+        if (_signalStrength > _pointCapFail && _signalStrength < _pointCapGood)
         {
             color = _signalColors[0];
             _ratingImage.sprite = _ratingSprites[0];
             _dudeImage.sprite = _dudeSprites[0];
             AudioSource.PlayClipAtPoint(_mediocreSound, Camera.main.transform.position, 0.2f);
         }
-        else if(_pointCapGlorious <= _points && _points < _pointCapGodlike)
+        else if(_signalStrength > _pointCapGood && _signalStrength < _pointCapGreat)
         {
             color = _signalColors[1];
             _ratingImage.sprite = _ratingSprites[1];
@@ -197,11 +132,11 @@ public class LevelCompleteScreen : MonoBehaviour {
             AudioSource.PlayClipAtPoint(_godlikeSound, Camera.main.transform.position, 0.2f);
         }
 
-        _pointsAmount.color = color;
-        _pointsLabel.color = color;
+        _signalStrengthText.color = color;
+        _signalStrengthLabel.color = color;
         _ratingImage.color = color;
         _wifiImage.color = color;
-        _wifiImage.fillAmount = _points.Scale(0f, _pointCapGodlike, 0f, 1f);
+        _wifiImage.fillAmount = _signalStrength.Scale(0f, _pointCapGood, 0f, 1f);
     }
 
     public void SetLevelTitle(int levelid)
@@ -209,11 +144,10 @@ public class LevelCompleteScreen : MonoBehaviour {
         _titleLabel.text = "LEVEL " + levelid + " COMPLETE";
     }
 
-    public void SetLevelPointCaps(int capGlorious, int capGodlike)
+    public void SetPointCaps(int fail, int good, int great)
     {
-        _pointCapGlorious = capGlorious;
-        _pointCapGodlike = capGodlike;
-        print("capglio");
-        print(capGlorious);
+        _pointCapFail = fail;
+        _pointCapGood = good;
+        _pointCapGreat = great;
     }
 }

@@ -35,7 +35,7 @@ public class OnUnityLoad
 {
 	static OnUnityLoad()
 	{
-		EditorApplication.playmodeStateChanged = () =>
+		EditorApplication.playModeStateChanged += (change) =>
 		{
 			if (EditorApplication.isPlayingOrWillChangePlaymode && !EditorApplication.isPlaying)
 			{

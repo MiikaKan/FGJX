@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,13 @@ public class SignalTransmitter : MonoBehaviour {
 
     private float _signalStrength;
 
+    private List<HitData> _hitDatas = new List<HitData>();
+
+    private struct HitData{
+        public Collider collider;
+        public Vector3 normal;
+    }
+
     private void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
@@ -26,9 +34,11 @@ public class SignalTransmitter : MonoBehaviour {
 
     private void Update()
     {
+        // Reset variables
         _lastPosition = transform.position;
         _direction = -transform.right;
         _signalStrength = _startingSignalStrength;
+        _hitDatas.Clear();
 
         // Set line's first vertex to starting position
         _lineRenderer.positionCount = 1;
@@ -47,8 +57,7 @@ public class SignalTransmitter : MonoBehaviour {
                 {
                     // If we hit goal, stop bouncing
                     receiver.Receive(_signalStrength);
-                    _lineRenderer.positionCount++;
-                    _lineRenderer.SetPosition(i, hit.point);
+                    AddBounceNodeAt(i, _lastPosition);
                     return;
                 }
 
@@ -66,39 +75,38 @@ public class SignalTransmitter : MonoBehaviour {
                 // If angle is too small, stop bouncing
                 if (180f - Vector3.Angle(_direction, oldDirection) < _minBounceAngle)
                 {
-                    _lineRenderer.positionCount++;
-                    _lineRenderer.SetPosition(i, hit.point);
+                    AddBounceNodeAt(i, _lastPosition);
                     return;
                 }
 
+                var hitData = new HitData();
+                hitData.collider = hit.collider;
+                hitData.normal = hit.normal;
+
+                // If we've already bounced off of this surface, stop bouncing
+                if(_hitDatas.Exists(x => x.collider == hitData.collider && x.normal == hitData.normal)){
+                    AddBounceNodeAt(i, hit.point);
+                    return;
+                }
+                _hitDatas.Add(hitData);
+
                 // Restart from this point, add this point to line
                 _lastPosition = hit.point;
-                _lineRenderer.positionCount++;
-                _lineRenderer.SetPosition(i, _lastPosition);
+                AddBounceNodeAt(i, _lastPosition);
 
-                // If signal strength is below 0, stop bouncing
-                if (_signalStrength <= 0.5f)
+                i++;
+
+                // If signal strength is below 0 or we're over maxBounces, stop bouncing
+                if (_signalStrength <= 0.5f || i >= _maxBounces)
                 {
                     return;
                 }
             }
-            else
-            {
-                break;
-            }
-
-            i++;
-
-            if(i >= _maxBounces)
-            {
-                break;
-            }
         }
+    }
 
-        // Set last line to be long (to appear to go on forever
-        //_lineRenderer.positionCount++;
-        //_lineRenderer.SetPosition(i, _lastPosition + _direction * 100);
-
-        Debug.DrawRay(_lastPosition, Vector3.up, Color.yellow);
+    private void AddBounceNodeAt(int index, Vector3 pos){
+        _lineRenderer.positionCount++;
+        _lineRenderer.SetPosition(index, pos);
     }
 }

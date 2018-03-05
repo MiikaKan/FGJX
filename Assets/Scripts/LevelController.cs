@@ -43,6 +43,8 @@ public class LevelController : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
         _requiredReceivers = new List<SignalReceiver>();
         TutorialRead = false;
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void CheckCompletion()
@@ -80,7 +82,7 @@ public class LevelController : MonoBehaviour {
         SceneManager.LoadScene(_activeLevel.SceneName);
     }
 
-    private void OnLevelWasLoaded(int level)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         _scoreDisplay = FindObjectOfType<ScoreDisplay>();
         _doneButton = FindObjectOfType<DoneButton>();

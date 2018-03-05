@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33158298705126194}
   - component: {fileID: 23320037870888696}
   - component: {fileID: 64444815504963686}
-  - component: {fileID: 114319344804626352}
+  - component: {fileID: 114984664032187330}
   m_Layer: 0
   m_Name: Room1
   m_TagString: Untagged
@@ -103,7 +103,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300042, guid: d8f7e6b4394e8874b8c0da0330fa2c7e, type: 3}
---- !u!114 &114319344804626352
+--- !u!114 &114984664032187330
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -114,4 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a60b3fd6b46ae347ba6a0573e01b0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceAmount: 0.9
+  _signalBounceType: 3

@@ -7,7 +7,8 @@ public enum SignalBounceType
 {
     POSITIVE,
     NEGATIVE,
-    NEUTRAL
+    NEUTRAL,
+    NOBOUNCE,
 }
 
 public class SignalBouncer : MonoBehaviour
@@ -26,6 +27,9 @@ public class SignalBouncer : MonoBehaviour
                     break;
                 case SignalBounceType.NEGATIVE:
                     bounceAmount = 0.75f;
+                    break;
+                case SignalBounceType.NOBOUNCE:
+                    bounceAmount = 0f;
                     break;
             }
             return bounceAmount;

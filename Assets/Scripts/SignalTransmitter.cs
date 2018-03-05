@@ -75,7 +75,7 @@ public class SignalTransmitter : MonoBehaviour {
                 // If angle is too small, stop bouncing
                 if (180f - Vector3.Angle(_direction, oldDirection) < _minBounceAngle)
                 {
-                    AddBounceNodeAt(i, _lastPosition);
+                    AddBounceNodeAt(i, hit.point);
                     return;
                 }
 
@@ -86,6 +86,7 @@ public class SignalTransmitter : MonoBehaviour {
                 // If we've already bounced off of this surface, stop bouncing
                 if(_hitDatas.Exists(x => x.collider == hitData.collider && x.normal == hitData.normal)){
                     AddBounceNodeAt(i, hit.point);
+                    print("already bounced off " + hit.collider.gameObject.name);
                     return;
                 }
                 _hitDatas.Add(hitData);

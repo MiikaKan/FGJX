@@ -67,8 +67,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1297079884289004}
-  m_LocalRotation: {x: -0, y: -0.6977906, z: 0, w: -0.7163018}
-  m_LocalPosition: {x: 5.014675, y: 0.43526697, z: 3.3273368}
+  m_LocalRotation: {x: -0, y: -0.9373945, z: -0, w: 0.3482694}
+  m_LocalPosition: {x: -1.406, y: 0.107, z: 0.502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4110477217101204}
@@ -171,6 +171,7 @@ MonoBehaviour:
   _maxBounces: 50
   _minBounceAngle: 3
   _scoreDisplay: {fileID: 0}
+  _animationSpeed: 5
 --- !u!120 &120579807404122216
 LineRenderer:
   m_ObjectHideFlags: 1

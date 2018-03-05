@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class SignalTransmitter : MonoBehaviour {
@@ -17,6 +18,9 @@ public class SignalTransmitter : MonoBehaviour {
     private float _minBounceAngle = 5f;
     [SerializeField]
     private ScoreDisplay _scoreDisplay;
+
+    [SerializeField]
+    private float _animationSpeed = 2f;
 
     private float _signalStrength;
     private bool _animationInProgress;
@@ -63,48 +67,38 @@ public class SignalTransmitter : MonoBehaviour {
             if (Physics.Raycast(_lastPosition, _direction, out hit))
             {
                 SignalReceiver receiver = hit.collider.gameObject.GetComponent<SignalReceiver>();
-                if (receiver)
-                {
-                    // If we hit goal, stop bouncing
-                    receiver.Receive(_signalStrength);
-                    AddBounceNodeAt(i, _lastPosition);
-                    return;
-                }
-
-                // If collider has signal strength multiplier, use it
                 SignalBouncer bouncer = hit.collider.gameObject.GetComponent<SignalBouncer>();
-                if (bouncer)
-                {
-                    _signalStrength *= bouncer.BounceAmount;
-                }
-
                 // Reflect at same angle
                 Vector3 oldDirection = _direction;
                 _direction = Vector3.Reflect(_direction, hit.normal);
-
-                // If angle is too small, stop bouncing
-                if (180f - Vector3.Angle(_direction, oldDirection) < _minBounceAngle)
-                {
-                    AddBounceNodeAt(i, hit.point);
-                    return;
-                }
+                float reflectionAngle = 180f - Vector3.Angle(_direction, oldDirection);
 
                 var hitData = new HitData();
                 hitData.collider = hit.collider;
                 hitData.normal = hit.normal;
                 hitData.point = hit.point;
+                bool alreadyBouncedOffThis = _hitDatas.Exists(x => x.collider == hitData.collider && x.normal == hitData.normal);
+                _hitDatas.Add(hitData);
 
-                // If we've already bounced off of this surface, stop bouncing
-                if(_hitDatas.Exists(x => x.collider == hitData.collider && x.normal == hitData.normal)){
-                    AddBounceNodeAt(i, hit.point);
+                if (bouncer)
+                {
+                    _signalStrength *= bouncer.BounceAmount;
+                }
+
+                AddBounceNodeAt(i, hit.point);
+
+                if(receiver){
+                    receiver.Receive(_signalStrength);
                     return;
                 }
-                _hitDatas.Add(hitData);
+
+                if (reflectionAngle < _minBounceAngle || alreadyBouncedOffThis)
+                {
+                    return;
+                }
 
                 // Restart from this point, add this point to line
                 _lastPosition = hit.point;
-                AddBounceNodeAt(i, _lastPosition);
-
                 i++;
 
                 // If signal strength is below 0 or we're over maxBounces, stop bouncing
@@ -116,10 +110,31 @@ public class SignalTransmitter : MonoBehaviour {
         }
     }
 
-    private void AnimateSignal(){
+    [Button]
+    public void Animate(){
+        StartCoroutine(AnimateSignal());
+    }
+    private IEnumerator AnimateSignal(){
         _animationInProgress = true;
 
-        _lineRenderer.SetPositions(new Vector3[]{transform.position});
+        _lineRenderer.positionCount = 1;
+        _lineRenderer.SetPosition(0, transform.position);
+
+        float progress = 0f;
+        Vector3 lastPos = transform.position;
+
+        foreach (var data in _lastHitDatas)
+        {
+            _lineRenderer.positionCount++;
+            while(progress < 1f){
+                progress += Time.deltaTime / (data.point-lastPos).magnitude * _animationSpeed;
+                var position = Vector3.Lerp(lastPos, data.point, progress);
+                _lineRenderer.SetPosition(_lineRenderer.positionCount-1, position);
+                yield return null;
+            }
+            progress = 0f;
+            lastPos = data.point;
+        }
 
         _animationInProgress = false;
     }

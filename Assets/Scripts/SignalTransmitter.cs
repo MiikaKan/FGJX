@@ -19,12 +19,15 @@ public class SignalTransmitter : MonoBehaviour {
     private ScoreDisplay _scoreDisplay;
 
     private float _signalStrength;
+    private bool _animationInProgress;
 
     private List<HitData> _hitDatas = new List<HitData>();
+    private List<HitData> _lastHitDatas = new List<HitData>();
 
     private struct HitData{
         public Collider collider;
         public Vector3 normal;
+        public Vector3 point;
     }
 
     private void Awake()
@@ -32,12 +35,19 @@ public class SignalTransmitter : MonoBehaviour {
         _lineRenderer = GetComponent<LineRenderer>();
     }
 
-    private void Update()
+    private void Update(){
+        if(!_animationInProgress){
+            RecalculateSignal();
+        }
+    }
+
+    private void RecalculateSignal()
     {
         // Reset variables
         _lastPosition = transform.position;
         _direction = -transform.right;
         _signalStrength = _startingSignalStrength;
+        _lastHitDatas = _hitDatas;
         _hitDatas.Clear();
 
         // Set line's first vertex to starting position
@@ -82,11 +92,11 @@ public class SignalTransmitter : MonoBehaviour {
                 var hitData = new HitData();
                 hitData.collider = hit.collider;
                 hitData.normal = hit.normal;
+                hitData.point = hit.point;
 
                 // If we've already bounced off of this surface, stop bouncing
                 if(_hitDatas.Exists(x => x.collider == hitData.collider && x.normal == hitData.normal)){
                     AddBounceNodeAt(i, hit.point);
-                    print("already bounced off " + hit.collider.gameObject.name);
                     return;
                 }
                 _hitDatas.Add(hitData);
@@ -104,6 +114,14 @@ public class SignalTransmitter : MonoBehaviour {
                 }
             }
         }
+    }
+
+    private void AnimateSignal(){
+        _animationInProgress = true;
+
+        _lineRenderer.SetPositions(new Vector3[]{transform.position});
+
+        _animationInProgress = false;
     }
 
     private void AddBounceNodeAt(int index, Vector3 pos){
